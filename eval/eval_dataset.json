@@ -1,0 +1,1084 @@
+[
+  {
+    "id": "case_01",
+    "label": "brute_force",
+    "alert": {
+      "target_account": "administrator",
+      "distinct_source_ips": 1,
+      "source_ips": [
+        "45.61.148.22"
+      ],
+      "failure_count": 80,
+      "time_window_seconds": 40,
+      "logon_type": 3,
+      "dominant_substatus": "0xC000006A",
+      "sample_events": [
+        {
+          "EventID": 4625,
+          "TargetUserName": "administrator",
+          "TargetDomainName": "CORP",
+          "IpAddress": "45.61.148.22",
+          "LogonType": 3,
+          "WorkstationName": "kali",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        },
+        {
+          "EventID": 4625,
+          "TargetUserName": "administrator",
+          "TargetDomainName": "CORP",
+          "IpAddress": "45.61.148.22",
+          "LogonType": 3,
+          "WorkstationName": "kali",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        }
+      ],
+      "rule": "Excessive 4625 - single source"
+    }
+  },
+  {
+    "id": "case_02",
+    "label": "brute_force",
+    "alert": {
+      "target_account": "<many>",
+      "distinct_target_accounts": 60,
+      "distinct_source_ips": 1,
+      "source_ips": [
+        "185.220.101.4"
+      ],
+      "failure_count": 120,
+      "time_window_seconds": 90,
+      "logon_type": 3,
+      "dominant_substatus": "0xC0000064",
+      "sample_events": [
+        {
+          "EventID": 4625,
+          "TargetUserName": "jsmith",
+          "TargetDomainName": "CORP",
+          "IpAddress": "185.220.101.4",
+          "LogonType": 3,
+          "WorkstationName": "WIN-CLIENT",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC0000064",
+          "TimeCreated": "T"
+        },
+        {
+          "EventID": 4625,
+          "TargetUserName": "oracle",
+          "TargetDomainName": "CORP",
+          "IpAddress": "185.220.101.4",
+          "LogonType": 3,
+          "WorkstationName": "WIN-CLIENT",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC0000064",
+          "TimeCreated": "T"
+        }
+      ],
+      "rule": "Username enumeration sweep"
+    }
+  },
+  {
+    "id": "case_03",
+    "label": "brute_force",
+    "alert": {
+      "target_account": "administrator",
+      "distinct_source_ips": 1,
+      "source_ips": [
+        "103.97.176.9"
+      ],
+      "failure_count": 55,
+      "time_window_seconds": 120,
+      "logon_type": 10,
+      "dominant_substatus": "0xC000006A",
+      "sample_events": [
+        {
+          "EventID": 4625,
+          "TargetUserName": "administrator",
+          "TargetDomainName": "CORP",
+          "IpAddress": "103.97.176.9",
+          "LogonType": 10,
+          "WorkstationName": "hydra",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        },
+        {
+          "EventID": 4625,
+          "TargetUserName": "administrator",
+          "TargetDomainName": "CORP",
+          "IpAddress": "103.97.176.9",
+          "LogonType": 10,
+          "WorkstationName": "hydra",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        }
+      ],
+      "rule": "RDP failed logons"
+    }
+  },
+  {
+    "id": "case_04",
+    "label": "brute_force",
+    "alert": {
+      "target_account": "svc-sql",
+      "distinct_source_ips": 1,
+      "source_ips": [
+        "10.10.9.44"
+      ],
+      "failure_count": 40,
+      "time_window_seconds": 30,
+      "logon_type": 3,
+      "dominant_substatus": "0xC000006A",
+      "sample_events": [
+        {
+          "EventID": 4625,
+          "TargetUserName": "svc-sql",
+          "TargetDomainName": "CORP",
+          "IpAddress": "10.10.9.44",
+          "LogonType": 3,
+          "WorkstationName": "WIN-CLIENT",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        },
+        {
+          "EventID": 4625,
+          "TargetUserName": "svc-sql",
+          "TargetDomainName": "CORP",
+          "IpAddress": "10.10.9.44",
+          "LogonType": 3,
+          "WorkstationName": "WIN-CLIENT",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        }
+      ],
+      "rule": "Service account hammering"
+    }
+  },
+  {
+    "id": "case_05",
+    "label": "brute_force",
+    "alert": {
+      "target_account": "domainadmin",
+      "distinct_source_ips": 1,
+      "source_ips": [
+        "45.9.148.77"
+      ],
+      "failure_count": 30,
+      "time_window_seconds": 25,
+      "logon_type": 3,
+      "dominant_substatus": "0xC000006A",
+      "sample_events": [
+        {
+          "EventID": 4625,
+          "TargetUserName": "domainadmin",
+          "TargetDomainName": "CORP",
+          "IpAddress": "45.9.148.77",
+          "LogonType": 3,
+          "WorkstationName": "WIN-CLIENT",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        },
+        {
+          "EventID": 4625,
+          "TargetUserName": "domainadmin",
+          "TargetDomainName": "CORP",
+          "IpAddress": "45.9.148.77",
+          "LogonType": 3,
+          "WorkstationName": "WIN-CLIENT",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        }
+      ],
+      "rule": "Rapid privileged-account failures"
+    }
+  },
+  {
+    "id": "case_06",
+    "label": "brute_force",
+    "alert": {
+      "target_account": "root",
+      "distinct_source_ips": 3,
+      "source_ips": [
+        "192.0.2.10",
+        "192.0.2.11",
+        "192.0.2.12"
+      ],
+      "failure_count": 90,
+      "time_window_seconds": 70,
+      "logon_type": 3,
+      "dominant_substatus": "0xC000006A",
+      "sample_events": [
+        {
+          "EventID": 4625,
+          "TargetUserName": "root",
+          "TargetDomainName": "CORP",
+          "IpAddress": "192.0.2.10",
+          "LogonType": 3,
+          "WorkstationName": "WIN-CLIENT",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        },
+        {
+          "EventID": 4625,
+          "TargetUserName": "root",
+          "TargetDomainName": "CORP",
+          "IpAddress": "192.0.2.12",
+          "LogonType": 3,
+          "WorkstationName": "WIN-CLIENT",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        }
+      ],
+      "rule": "Small-subnet distributed failures"
+    }
+  },
+  {
+    "id": "case_07",
+    "label": "brute_force",
+    "alert": {
+      "target_account": "administrator",
+      "distinct_source_ips": 1,
+      "source_ips": [
+        "91.219.236.18"
+      ],
+      "failure_count": 25,
+      "time_window_seconds": 300,
+      "logon_type": 3,
+      "dominant_substatus": "0xC000006A",
+      "note_for_reviewer": "HARD: low count but sustained, external, privileged, all bad-password",
+      "sample_events": [
+        {
+          "EventID": 4625,
+          "TargetUserName": "administrator",
+          "TargetDomainName": "CORP",
+          "IpAddress": "91.219.236.18",
+          "LogonType": 3,
+          "WorkstationName": "WIN-CLIENT",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        },
+        {
+          "EventID": 4625,
+          "TargetUserName": "administrator",
+          "TargetDomainName": "CORP",
+          "IpAddress": "91.219.236.18",
+          "LogonType": 3,
+          "WorkstationName": "WIN-CLIENT",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        }
+      ],
+      "rule": "Low-and-slow single-source"
+    }
+  },
+  {
+    "id": "case_08",
+    "label": "brute_force",
+    "alert": {
+      "target_account": "Administrator",
+      "distinct_source_ips": 1,
+      "source_ips": [
+        "45.155.205.233"
+      ],
+      "failure_count": 200,
+      "time_window_seconds": 100,
+      "logon_type": 3,
+      "dominant_substatus": "0xC000006A",
+      "sample_events": [
+        {
+          "EventID": 4625,
+          "TargetUserName": "Administrator",
+          "TargetDomainName": "CORP",
+          "IpAddress": "45.155.205.233",
+          "LogonType": 3,
+          "WorkstationName": "RANDOM7X",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        },
+        {
+          "EventID": 4625,
+          "TargetUserName": "Administrator",
+          "TargetDomainName": "CORP",
+          "IpAddress": "45.155.205.233",
+          "LogonType": 3,
+          "WorkstationName": "ZZ19QP",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        }
+      ],
+      "rule": "NTLM failure flood"
+    }
+  },
+  {
+    "id": "case_09",
+    "label": "brute_force",
+    "alert": {
+      "target_account": "backup_admin",
+      "distinct_source_ips": 1,
+      "source_ips": [
+        "194.165.16.71"
+      ],
+      "failure_count": 60,
+      "time_window_seconds": 45,
+      "logon_type": 3,
+      "dominant_substatus": "0xC000006A",
+      "time_of_day": "03:14",
+      "sample_events": [
+        {
+          "EventID": 4625,
+          "TargetUserName": "backup_admin",
+          "TargetDomainName": "CORP",
+          "IpAddress": "194.165.16.71",
+          "LogonType": 3,
+          "WorkstationName": "WIN-CLIENT",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "03:14:02"
+        },
+        {
+          "EventID": 4625,
+          "TargetUserName": "backup_admin",
+          "TargetDomainName": "CORP",
+          "IpAddress": "194.165.16.71",
+          "LogonType": 3,
+          "WorkstationName": "WIN-CLIENT",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "03:14:05"
+        }
+      ],
+      "rule": "After-hours admin failures"
+    }
+  },
+  {
+    "id": "case_10",
+    "label": "brute_force",
+    "alert": {
+      "target_account": "administrator,admin,root,sa",
+      "distinct_target_accounts": 4,
+      "distinct_source_ips": 1,
+      "source_ips": [
+        "45.132.227.9"
+      ],
+      "failure_count": 70,
+      "time_window_seconds": 50,
+      "logon_type": 3,
+      "dominant_substatus": "0xC000006A",
+      "sample_events": [
+        {
+          "EventID": 4625,
+          "TargetUserName": "admin",
+          "TargetDomainName": "CORP",
+          "IpAddress": "45.132.227.9",
+          "LogonType": 3,
+          "WorkstationName": "WIN-CLIENT",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        },
+        {
+          "EventID": 4625,
+          "TargetUserName": "sa",
+          "TargetDomainName": "CORP",
+          "IpAddress": "45.132.227.9",
+          "LogonType": 3,
+          "WorkstationName": "WIN-CLIENT",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        }
+      ],
+      "rule": "Common-account spray from one host"
+    }
+  },
+  {
+    "id": "case_11",
+    "label": "brute_force",
+    "alert": {
+      "target_account": "jdoe",
+      "distinct_source_ips": 1,
+      "source_ips": [
+        "27.124.5.98"
+      ],
+      "failure_count": 45,
+      "time_window_seconds": 90,
+      "logon_type": 10,
+      "dominant_substatus": "0xC0000234",
+      "sample_events": [
+        {
+          "EventID": 4625,
+          "TargetUserName": "jdoe",
+          "TargetDomainName": "CORP",
+          "IpAddress": "27.124.5.98",
+          "LogonType": 10,
+          "WorkstationName": "WIN-CLIENT",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        },
+        {
+          "EventID": 4625,
+          "TargetUserName": "jdoe",
+          "TargetDomainName": "CORP",
+          "IpAddress": "27.124.5.98",
+          "LogonType": 10,
+          "WorkstationName": "WIN-CLIENT",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC0000234",
+          "TimeCreated": "T"
+        }
+      ],
+      "rule": "Foreign RDP with lockout"
+    }
+  },
+  {
+    "id": "case_12",
+    "label": "brute_force",
+    "alert": {
+      "target_account": "vpn-gw",
+      "distinct_source_ips": 1,
+      "source_ips": [
+        "176.113.115.42"
+      ],
+      "failure_count": 35,
+      "time_window_seconds": 40,
+      "logon_type": 3,
+      "dominant_substatus": "0xC000006A",
+      "sample_events": [
+        {
+          "EventID": 4625,
+          "TargetUserName": "vpn-gw",
+          "TargetDomainName": "CORP",
+          "IpAddress": "176.113.115.42",
+          "LogonType": 3,
+          "WorkstationName": "WIN-CLIENT",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        },
+        {
+          "EventID": 4625,
+          "TargetUserName": "vpn-gw",
+          "TargetDomainName": "CORP",
+          "IpAddress": "176.113.115.42",
+          "LogonType": 3,
+          "WorkstationName": "WIN-CLIENT",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        }
+      ],
+      "rule": "VPN account brute force"
+    }
+  },
+  {
+    "id": "case_13",
+    "label": "brute_force",
+    "alert": {
+      "target_account": "sa",
+      "distinct_source_ips": 1,
+      "source_ips": [
+        "45.227.254.8"
+      ],
+      "failure_count": 100,
+      "time_window_seconds": 55,
+      "logon_type": 3,
+      "dominant_substatus": "0xC000006A",
+      "sample_events": [
+        {
+          "EventID": 4625,
+          "TargetUserName": "sa",
+          "TargetDomainName": "CORP",
+          "IpAddress": "45.227.254.8",
+          "LogonType": 3,
+          "WorkstationName": "WIN-CLIENT",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        },
+        {
+          "EventID": 4625,
+          "TargetUserName": "sa",
+          "TargetDomainName": "CORP",
+          "IpAddress": "45.227.254.8",
+          "LogonType": 3,
+          "WorkstationName": "WIN-CLIENT",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        }
+      ],
+      "rule": "DB 'sa' account flood"
+    }
+  },
+  {
+    "id": "case_14",
+    "label": "brute_force",
+    "alert": {
+      "target_account": "da-svc",
+      "distinct_source_ips": 1,
+      "source_ips": [
+        "193.32.162.20"
+      ],
+      "failure_count": 50,
+      "time_window_seconds": 60,
+      "logon_type": 3,
+      "dominant_substatus": "0xC000006A",
+      "sample_events": [
+        {
+          "EventID": 4625,
+          "TargetUserName": "da-svc",
+          "TargetDomainName": "CORP",
+          "IpAddress": "193.32.162.20",
+          "LogonType": 3,
+          "WorkstationName": "WIN-CLIENT",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        },
+        {
+          "EventID": 4625,
+          "TargetUserName": "da-svc",
+          "TargetDomainName": "CORP",
+          "IpAddress": "193.32.162.20",
+          "LogonType": 3,
+          "WorkstationName": "WIN-CLIENT",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        }
+      ],
+      "rule": "Sustained domain-admin failures"
+    }
+  },
+  {
+    "id": "case_15",
+    "label": "brute_force",
+    "alert": {
+      "target_account": "administrator",
+      "distinct_source_ips": 1,
+      "source_ips": [
+        "146.70.199.15"
+      ],
+      "failure_count": 300,
+      "time_window_seconds": 30,
+      "logon_type": 3,
+      "dominant_substatus": "0xC000006A",
+      "sample_events": [
+        {
+          "EventID": 4625,
+          "TargetUserName": "administrator",
+          "TargetDomainName": "CORP",
+          "IpAddress": "146.70.199.15",
+          "LogonType": 3,
+          "WorkstationName": "WIN-CLIENT",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        },
+        {
+          "EventID": 4625,
+          "TargetUserName": "administrator",
+          "TargetDomainName": "CORP",
+          "IpAddress": "146.70.199.15",
+          "LogonType": 3,
+          "WorkstationName": "WIN-CLIENT",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        }
+      ],
+      "rule": "High-rate burst"
+    }
+  },
+  {
+    "id": "case_16",
+    "label": "benign",
+    "alert": {
+      "target_account": "mgarcia",
+      "distinct_source_ips": 1,
+      "source_ips": [
+        "10.0.4.31"
+      ],
+      "failure_count": 3,
+      "time_window_seconds": 120,
+      "logon_type": 2,
+      "dominant_substatus": "0xC000006A",
+      "followed_by_success": true,
+      "sample_events": [
+        {
+          "EventID": 4625,
+          "TargetUserName": "mgarcia",
+          "TargetDomainName": "CORP",
+          "IpAddress": "10.0.4.31",
+          "LogonType": 2,
+          "WorkstationName": "MGARCIA-PC",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        }
+      ],
+      "rule": "Single user typo then success"
+    }
+  },
+  {
+    "id": "case_17",
+    "label": "benign",
+    "alert": {
+      "target_account": "rpatel",
+      "distinct_source_ips": 1,
+      "source_ips": [
+        "10.0.7.88"
+      ],
+      "failure_count": 5,
+      "time_window_seconds": 1200,
+      "logon_type": 3,
+      "dominant_substatus": "0xC000006A",
+      "known_device": true,
+      "sample_events": [
+        {
+          "EventID": 4625,
+          "TargetUserName": "rpatel",
+          "TargetDomainName": "CORP",
+          "IpAddress": "10.0.7.88",
+          "LogonType": 3,
+          "WorkstationName": "iPhone-rpatel",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        }
+      ],
+      "rule": "Stale mobile device credential"
+    }
+  },
+  {
+    "id": "case_18",
+    "label": "benign",
+    "alert": {
+      "target_account": "tnguyen",
+      "distinct_source_ips": 1,
+      "source_ips": [
+        "10.0.4.52"
+      ],
+      "failure_count": 4,
+      "time_window_seconds": 600,
+      "logon_type": 2,
+      "dominant_substatus": "0xC000006A",
+      "followed_by_success": true,
+      "sample_events": [
+        {
+          "EventID": 4625,
+          "TargetUserName": "tnguyen",
+          "TargetDomainName": "CORP",
+          "IpAddress": "10.0.4.52",
+          "LogonType": 2,
+          "WorkstationName": "TNGUYEN-PC",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        }
+      ],
+      "rule": "New employee mistyping"
+    }
+  },
+  {
+    "id": "case_19",
+    "label": "benign",
+    "alert": {
+      "target_account": "svc-report",
+      "distinct_source_ips": 1,
+      "source_ips": [
+        "10.10.2.5"
+      ],
+      "failure_count": 2,
+      "time_window_seconds": 15,
+      "logon_type": 5,
+      "dominant_substatus": "0xC000006A",
+      "followed_by_success": true,
+      "sample_events": [
+        {
+          "EventID": 4625,
+          "TargetUserName": "svc-report",
+          "TargetDomainName": "CORP",
+          "IpAddress": "10.10.2.5",
+          "LogonType": 5,
+          "WorkstationName": "APPSRV01",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        }
+      ],
+      "rule": "Service restart with old cached cred"
+    }
+  },
+  {
+    "id": "case_20",
+    "label": "benign",
+    "alert": {
+      "target_account": "scan-svc",
+      "distinct_source_ips": 1,
+      "source_ips": [
+        "10.0.9.200"
+      ],
+      "failure_count": 6,
+      "time_window_seconds": 28800,
+      "logon_type": 3,
+      "dominant_substatus": "0xC000006A",
+      "known_device": true,
+      "sample_events": [
+        {
+          "EventID": 4625,
+          "TargetUserName": "scan-svc",
+          "TargetDomainName": "CORP",
+          "IpAddress": "10.0.9.200",
+          "LogonType": 3,
+          "WorkstationName": "HP-MFP-3F",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        }
+      ],
+      "rule": "Printer with outdated credentials"
+    }
+  },
+  {
+    "id": "case_21",
+    "label": "benign",
+    "alert": {
+      "target_account": "klee",
+      "distinct_source_ips": 1,
+      "source_ips": [
+        "10.0.4.19"
+      ],
+      "failure_count": 1,
+      "time_window_seconds": 10,
+      "logon_type": 2,
+      "dominant_substatus": "0xC000006A",
+      "followed_by_success": true,
+      "sample_events": [
+        {
+          "EventID": 4625,
+          "TargetUserName": "klee",
+          "TargetDomainName": "OLDDOM",
+          "IpAddress": "10.0.4.19",
+          "LogonType": 2,
+          "WorkstationName": "KLEE-PC",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        }
+      ],
+      "rule": "Wrong-domain single failure then success"
+    }
+  },
+  {
+    "id": "case_22",
+    "label": "benign",
+    "alert": {
+      "target_account": "dwilson",
+      "distinct_source_ips": 1,
+      "source_ips": [
+        "10.0.4.77"
+      ],
+      "failure_count": 3,
+      "time_window_seconds": 38,
+      "logon_type": 2,
+      "dominant_substatus": "0xC000006A",
+      "followed_by_success": true,
+      "note_for_reviewer": "HARD: short window like an attack, but only 3 fails from user's own PC",
+      "sample_events": [
+        {
+          "EventID": 4625,
+          "TargetUserName": "dwilson",
+          "TargetDomainName": "CORP",
+          "IpAddress": "10.0.4.77",
+          "LogonType": 2,
+          "WorkstationName": "DWILSON-PC",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        }
+      ],
+      "rule": "Caps-lock typo, short window"
+    }
+  },
+  {
+    "id": "case_23",
+    "label": "benign",
+    "alert": {
+      "target_account": "bthomas",
+      "distinct_source_ips": 1,
+      "source_ips": [
+        "10.0.4.61"
+      ],
+      "failure_count": 3,
+      "time_window_seconds": 180,
+      "logon_type": 2,
+      "dominant_substatus": "0xC000006A",
+      "followed_by_success": true,
+      "sample_events": [
+        {
+          "EventID": 4625,
+          "TargetUserName": "bthomas",
+          "TargetDomainName": "CORP",
+          "IpAddress": "10.0.4.61",
+          "LogonType": 2,
+          "WorkstationName": "BTHOMAS-PC",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        }
+      ],
+      "rule": "Expired password after vacation"
+    }
+  },
+  {
+    "id": "case_24",
+    "label": "benign",
+    "alert": {
+      "target_account": "svc-batch",
+      "distinct_source_ips": 1,
+      "source_ips": [
+        "10.10.2.9"
+      ],
+      "failure_count": 4,
+      "time_window_seconds": 900,
+      "logon_type": 4,
+      "dominant_substatus": "0xC000006A",
+      "known_device": true,
+      "sample_events": [
+        {
+          "EventID": 4625,
+          "TargetUserName": "svc-batch",
+          "TargetDomainName": "CORP",
+          "IpAddress": "10.10.2.9",
+          "LogonType": 4,
+          "WorkstationName": "BATCHSRV",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        }
+      ],
+      "rule": "Scheduled task with rotated password"
+    }
+  },
+  {
+    "id": "case_25",
+    "label": "benign",
+    "alert": {
+      "target_account": "<mixed>",
+      "distinct_target_accounts": 2,
+      "distinct_source_ips": 2,
+      "source_ips": [
+        "10.0.4.33",
+        "10.0.5.41"
+      ],
+      "failure_count": 2,
+      "time_window_seconds": 45,
+      "logon_type": 2,
+      "dominant_substatus": "0xC000006A",
+      "sample_events": [
+        {
+          "EventID": 4625,
+          "TargetUserName": "achen",
+          "TargetDomainName": "CORP",
+          "IpAddress": "10.0.4.33",
+          "LogonType": 2,
+          "WorkstationName": "ACHEN-PC",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        },
+        {
+          "EventID": 4625,
+          "TargetUserName": "pmoore",
+          "TargetDomainName": "CORP",
+          "IpAddress": "10.0.5.41",
+          "LogonType": 2,
+          "WorkstationName": "PMOORE-PC",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        }
+      ],
+      "rule": "Two users one failure each"
+    }
+  },
+  {
+    "id": "case_26",
+    "label": "benign",
+    "alert": {
+      "target_account": "hkim",
+      "distinct_source_ips": 1,
+      "source_ips": [
+        "10.0.6.72"
+      ],
+      "failure_count": 5,
+      "time_window_seconds": 1800,
+      "logon_type": 3,
+      "dominant_substatus": "0xC000006A",
+      "known_device": true,
+      "sample_events": [
+        {
+          "EventID": 4625,
+          "TargetUserName": "hkim",
+          "TargetDomainName": "CORP",
+          "IpAddress": "10.0.6.72",
+          "LogonType": 3,
+          "WorkstationName": "HKIM-PC",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        }
+      ],
+      "rule": "Mapped drive cached credential"
+    }
+  },
+  {
+    "id": "case_27",
+    "label": "benign",
+    "alert": {
+      "target_account": "lroberts",
+      "distinct_source_ips": 1,
+      "source_ips": [
+        "10.0.7.14"
+      ],
+      "failure_count": 4,
+      "time_window_seconds": 3600,
+      "logon_type": 3,
+      "dominant_substatus": "0xC000006A",
+      "known_device": true,
+      "sample_events": [
+        {
+          "EventID": 4625,
+          "TargetUserName": "lroberts",
+          "TargetDomainName": "CORP",
+          "IpAddress": "10.0.7.14",
+          "LogonType": 3,
+          "WorkstationName": "Outlook-Mobile",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        }
+      ],
+      "rule": "Email client after password change"
+    }
+  },
+  {
+    "id": "case_28",
+    "label": "benign",
+    "alert": {
+      "target_account": "admin-jturner",
+      "distinct_source_ips": 1,
+      "source_ips": [
+        "10.10.0.5"
+      ],
+      "failure_count": 2,
+      "time_window_seconds": 25,
+      "logon_type": 10,
+      "dominant_substatus": "0xC000006A",
+      "followed_by_success": true,
+      "known_device": true,
+      "sample_events": [
+        {
+          "EventID": 4625,
+          "TargetUserName": "admin-jturner",
+          "TargetDomainName": "CORP",
+          "IpAddress": "10.10.0.5",
+          "LogonType": 10,
+          "WorkstationName": "JUMP01",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        }
+      ],
+      "rule": "Admin typo from jump host then success"
+    }
+  },
+  {
+    "id": "case_29",
+    "label": "benign",
+    "alert": {
+      "target_account": "<mixed>",
+      "distinct_target_accounts": 3,
+      "distinct_source_ips": 1,
+      "source_ips": [
+        "10.0.8.9"
+      ],
+      "failure_count": 3,
+      "time_window_seconds": 28800,
+      "logon_type": 2,
+      "dominant_substatus": "0xC000006A",
+      "known_device": true,
+      "sample_events": [
+        {
+          "EventID": 4625,
+          "TargetUserName": "shift1",
+          "TargetDomainName": "CORP",
+          "IpAddress": "10.0.8.9",
+          "LogonType": 2,
+          "WorkstationName": "FLOOR-KIOSK",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        },
+        {
+          "EventID": 4625,
+          "TargetUserName": "shift2",
+          "TargetDomainName": "CORP",
+          "IpAddress": "10.0.8.9",
+          "LogonType": 2,
+          "WorkstationName": "FLOOR-KIOSK",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        }
+      ],
+      "rule": "Shared workstation occasional fails"
+    }
+  },
+  {
+    "id": "case_30",
+    "label": "benign",
+    "alert": {
+      "target_account": "ewhite",
+      "distinct_source_ips": 1,
+      "source_ips": [
+        "10.0.10.55"
+      ],
+      "failure_count": 4,
+      "time_window_seconds": 1500,
+      "logon_type": 3,
+      "dominant_substatus": "0xC000006A",
+      "known_device": true,
+      "sample_events": [
+        {
+          "EventID": 4625,
+          "TargetUserName": "ewhite",
+          "TargetDomainName": "CORP",
+          "IpAddress": "10.0.10.55",
+          "LogonType": 3,
+          "WorkstationName": "ewhite-laptop",
+          "Status": "0xC000006D",
+          "SubStatus": "0xC000006A",
+          "TimeCreated": "T"
+        }
+      ],
+      "rule": "Wi-Fi 802.1x re-auth failures"
+    }
+  }
+]
